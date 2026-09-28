@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEVA | My List</title>
+    <meta name="description" content="Your favorite movies on CINEVA.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="logo">
+            <i class="fas fa-film"></i> CINEVA
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="mylist.html" class="active">My List</a></li>
+        </ul>
+        <div class="nav-actions">
+            <input type="text" id="search-input" class="search-input" placeholder="Search my list...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <div class="user-profile">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Halaman utama -->
+    <main class="container" style="margin-top: 100px;">
+        <section class="movie-section">
+            <div class="section-header">
+                <h2>My List</h2>
+            </div>
+            
+            <div class="movie-grid" id="mylist-grid">
+                <!-- Film yang ditambahkan ke list akan muncul di sini otomatis -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Player Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="video-container">
+                <video id="movie-player" controls preload="none">
+                    <source src="" type="video/mp4">
+                    Browser Anda tidak mendukung video tag.
+                </video>
+            </div>
+            <div class="modal-details">
+                <h2 id="modal-title">Judul Film</h2>
+                <div class="modal-meta">
+                    <span id="modal-year">2024</span>
+                    <span class="badge quality">HD</span>
+                </div>
+                <p id="modal-desc">Deskripsi film.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

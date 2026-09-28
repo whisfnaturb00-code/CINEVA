@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEVA | Premium Movie Streaming</title>
+    <meta name="description" content="Watch the latest and greatest movies on CINEVA in stunning quality.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-film"></i> CINEVA
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="mylist.html">My List</a></li>
+        </ul>
+        <div class="nav-actions">
+            <input type="text" id="search-input" class="search-input" placeholder="Search movies...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <div class="user-profile">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User">
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Top</span>
+            <h1 class="hero-title">Incantation</h1>
+            <div class="hero-meta">
+                <span><i class="fas fa-star"></i> 6.3</span>
+                <span>2022</span>
+                <span>Horror</span>
+                <span>1h 55m</span>
+            </div>
+            <p class="hero-desc">Film Incantation mengisahkan perjalanan Li Ronan (Tsai Hsuan-yen) menghadapi kutukan yang menimpa dirinya setelah ikut terlibat melanggar tabu dan pantangan sebuah kepercayaan enam tahun lalu.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="playHeroVideo('assets/Film/Incantation (2022).mp4')">
+                    <i class="fas fa-play"></i> Watch Now
+                </button>
+                <button id="hero-add-btn" class="btn btn-secondary" onclick="addToList(null, 4)">
+                    <i class="fas fa-plus"></i> Add to List
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="movie-section">
+            <div class="section-header">
+                <h2>Trending Now</h2>
+                <a href="movies.html" class="see-all">See All <i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+            <div class="movie-grid" id="movie-grid">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Player Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="video-container">
+                <video id="movie-player" controls preload="none">
+                    <source src="" type="video/mp4">
+
+                </video>
+            </div>
+            <div class="modal-details">
+                <h2 id="modal-title">Judul Film</h2>
+                <div class="modal-meta">
+                    <span id="modal-year">2024</span>
+                    <span class="badge quality">HD</span>
+                </div>
+                <p id="modal-desc">Deskripsi film.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
